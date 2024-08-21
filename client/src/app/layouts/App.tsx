@@ -2,6 +2,7 @@ import Catalog from "../../features/catalog/Catalog";
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import Header from "./Header";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -25,7 +26,7 @@ function App() {
       <CssBaseline /> {/* removes all margin and padding */}
       <Header darkMode={darkMode} changeMode={changeMode} />
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
