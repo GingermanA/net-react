@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Product } from "../../app/models/product";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Props {
   product: Product;
