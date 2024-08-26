@@ -11,8 +11,6 @@ import {
 } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Product } from "../../app/models/product";
-import agent from "../../app/api/agent";
 import NotFound from "../../app/errors/NotFound";
 import LoadingComponent from "../../app/layouts/LoadingComponent";
 import { LoadingButton } from "@mui/lab";
@@ -24,7 +22,6 @@ import {
 import { fetchProductAsync, productSelectors } from "./catalogSlice";
 
 function ProductDetails() {
-  // const { basket, setBasket, removeItem } = useStoreContext();
   const { basket, status } = useAppSelector((state) => state.basket);
   const dispatch = useAppDispatch();
   const { id } = useParams<{ id: string }>();

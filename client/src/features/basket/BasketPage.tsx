@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Basket } from "../../app/models/basket";
-import agent from "../../app/api/agent";
-import LoadingComponent from "../../app/layouts/LoadingComponent";
 import {
   Box,
   Button,
   Grid,
-  IconButton,
   Paper,
   Table,
   TableBody,
@@ -25,7 +20,6 @@ import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 import {
   addBasketItemAsync,
   removeBasketItemAsync,
-  setBasket,
 } from "./basketSlice";
 
 function BasketPage() {
