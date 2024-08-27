@@ -1,25 +1,10 @@
-import {
-  Box,
-  Checkbox,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  FormLabel,
-  Grid,
-  Pagination,
-  Paper,
-  Radio,
-  RadioGroup,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Grid, Paper } from "@mui/material";
 import LoadingComponent from "../../app/layouts/LoadingComponent";
 import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 import {
   fetchFilters,
   fetchProductsAsync,
   productSelectors,
-  resetProductParams,
   setPageNumber,
   setProductParams,
 } from "./catalogSlice";
@@ -40,7 +25,6 @@ function Catalog() {
   const products = useAppSelector(productSelectors.selectAll);
   const {
     productsLoaded,
-    status,
     filtersLoaded,
     brands,
     types,
